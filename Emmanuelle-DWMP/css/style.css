@@ -1,0 +1,460 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f0f0f;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #1a1919;
+    color: #ff69b4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: #ff69b4;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #fff;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.144); 
+    z-index: 1; 
+}
+
+  
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6vh;
+    width: 97%;
+    background-color: #899da8b2; /* Transparência */
+    color:#343434;
+    z-index: 1; 
+    padding: 20px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 4fr 1fr;
+  }
+
+  
+  .header p {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 36px;    }
+  
+  .header nav ul {
+    list-style: none; 
+    display: flex;    
+    gap: 5vw;        
+  }
+  
+  .header nav ul li {
+    display: inline;
+
+  }
+  
+  .header nav ul li a {
+    color:#343434;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+  }
+
+.apresentação {
+    z-index: 1;
+    width: 500px;
+    margin: 30% 70% ;
+    color: #EBEBEB;
+    align-items:center;
+    justify-content: center;
+    display: flex;
+}
+
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#sobre {
+    background-color: #222120;
+    color: #ffeeee;
+    padding: 100px;
+    text-align: center;
+}
+
+.sobre-container {
+    max-width: 800px; /* Limita a largura da seção */
+    margin: 0 auto; /* Centraliza a seção */
+    padding: 20px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Sombra para profundidade */
+}
+
+h2 {
+    color: #ff69b4; /* Cor do título */
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.6; /* Aumenta o espaçamento entre linhas */
+    margin-bottom: 15px; /* Espaçamento entre parágrafos */
+}
+
+#carrossel {
+    background-color: #1a1a1a;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-track img {
+    width: 80%;
+    max-width: 50%;
+    height: auto;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+.carousel-button {
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 60px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    
+}
+
+.prev {
+    left: 30px;
+}
+
+.next {
+    right: 20px;
+}
+
+.carousel-button:hover {
+    transform: scale(1.1) translateY(-50%);
+}
+
+#info-cards {
+    padding: 100px;
+    background: linear-gradient(to right, #270315, #b8427d, #420523);
+    color: #000;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    width: 300px;
+}
+
+.card:hover {
+    transform: translateY(-10px) rotate(3deg);
+}
+
+
+#depoimentos {
+    background-color: #111;
+    color: #eebad4;
+    padding: 200px;
+    text-align: center;
+}
+#depoimentos img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f779c6; /* Borda ao redor da imagem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#galeria {
+    background-color: #1a1a1a;
+    padding: 200px;
+    text-align: center;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.galeria-grid img:hover {
+    transform: scale(1.05);
+}
+
+#videos {
+    background-color: #332f31; 
+    padding: 200px 20px; 
+    text-align: center; 
+}
+
+
+#videos h2 {
+    font-size: 2em;
+    margin-bottom: 30px; 
+    color: #c00a6e; 
+}
+
+.videos-grid {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 20px;
+}
+
+/*iframes */
+.videos-grid iframe {
+    border-radius: 8px; 
+    transition: transform 0.3s; /* transição */
+}
+
+/* zoom */
+.videos-grid iframe:hover {
+    transform: scale(1.05); 
+}
+
+
+
+#contato {
+    background-color: #615d5f;
+    padding: 200px;
+    text-align: center;
+}
+
+.form-group {
+    margin: 20px 0;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #000;
+    color: #ee469a;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #444;
+}
+
+
+  
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #be0c65;
+    text-align: center; 
+}
+.drinks {
+
+    border-left: 4px solid #f08fcb; /* Borda esquerda */
+    border-right: 4px solid #f08fcb; /* Borda direita */
+    padding: 20px; /* Espaçamento interno */
+    margin: 20px 5px; /* Margem acima e abaixo (opcional) */
+}
+.slideshow * {
+    box-sizing: border-box;
+    
+  }
+  
+  /* Contêiner do slideshow */
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+   
+  }
+  
+  /* Esconde as imagens por padrão */
+  .slideshow .mySlides {
+    display: none;
+  }
+  
+  /* Botões de próximo e anterior */
+  .slideshow .prev, .slideshow .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Posiciona o botão "próximo" à direita */
+  .slideshow .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* Ao passar o mouse, adiciona uma cor de fundo preta com um pouco de transparência */
+  .slideshow .prev:hover, .slideshow .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Texto da legenda */
+  .slideshow .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Texto do número (1/3 etc.) */
+  .slideshow .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Pontos/balas/indicadores */
+  .slideshow .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .slideshow .active, .slideshow .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Animação de desvanecimento */
+  .slideshow .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from { opacity: .4; }
+    to { opacity: 1; }
+  }
